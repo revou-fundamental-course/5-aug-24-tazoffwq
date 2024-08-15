@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Kalkulator BMI</h1>
+    </header>
+
+    <div class="container">
+        <div class="left-column">
+            <div class="usage-info">
+                <h3>Cara Penggunaan</h3>
+                <p>
+                    1. Pilih jenis kelamin Anda dengan mengklik gambar pria atau wanita.<br>
+                    2. Masukkan berat badan Anda dalam kilogram (kg).<br>
+                    3. Masukkan tinggi badan Anda dalam sentimeter (cm).<br>
+                    4. Klik tombol "Hitung BMI" untuk mendapatkan hasil BMI Anda.<br>
+                    5. Hasil BMI akan ditampilkan di bawah tombol dan menunjukkan kategori berat badan Anda.
+                </p>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin:</label>
+                <div class="gender-selection">
+                    <img src="/images/Man.png" alt="Pria" class="gender-image" id="male" onclick="selectGender('male')">
+                    <img src="/images/Woman.png" alt="Wanita" class="gender-image" id="female" onclick="selectGender('female')">
+                </div>
+                <input type="hidden" id="gender" value="">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" step="0.1" placeholder="Masukkan berat badan">
+            </div>
+
+            <div class="form-group">
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" step="0.1" placeholder="Masukkan tinggi badan">
+            </div>
+
+            <button onclick="calculateBMI()">Hitung BMI</button>
+
+            <div class="result" id="result"></div>
+        </div>
+
+        <div class="right-column">
+            <h3>Informasi Kesehatan</h3>
+            <p>
+                Berat badan berlebih atau obesitas dapat meningkatkan risiko berbagai penyakit serius. Berikut adalah beberapa penyakit yang dapat terkait dengan berat badan berlebih:
+            </p>
+            <ul>
+                <li><strong>Diabetes Tipe 2:</strong> Berat badan berlebih dapat menyebabkan resistensi insulin, yang dapat memicu diabetes tipe 2.</li>
+                <li><strong>Hipertensi (Tekanan Darah Tinggi):</strong> Kelebihan berat badan sering kali menyebabkan tekanan darah tinggi, yang meningkatkan risiko penyakit jantung.</li>
+                <li><strong>Penyakit Jantung Koroner:</strong> Obesitas meningkatkan risiko aterosklerosis (pengerasan arteri) yang dapat menyebabkan serangan jantung.</li>
+                <li><strong>Apnea Tidur:</strong> Kelebihan berat badan dapat menyebabkan gangguan tidur, seperti apnea tidur, yang mengganggu pola pernapasan saat tidur.</li>
+                <li><strong>Stroke:</strong> Risiko stroke meningkat dengan berat badan berlebih karena dampaknya terhadap sistem kardiovaskular.</li>
+                <li><strong>Osteoartritis:</strong> Beban ekstra pada sendi akibat obesitas dapat menyebabkan osteoartritis dan nyeri sendi.</li>
+            </ul>
+            <p>
+                Menjaga berat badan yang sehat adalah langkah penting untuk mencegah berbagai masalah kesehatan. Konsultasikan dengan tenaga medis untuk informasi lebih lanjut dan saran personal.
+            </p>
+            <br>
+            <p id="Play-store">
+                <a href="https://play.google.com/store/apps/details?id=com.splendapps.bmicalc&hl=en&pli=1" >
+                  <img src="/images/aa.png" width="160"/>
+                </a>
+            </p>
+            <hr>
+            <p class="Dvp-Name">
+                @faaza02
+            </p>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
